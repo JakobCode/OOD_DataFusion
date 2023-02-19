@@ -1,0 +1,33 @@
+---
+num_workers: 2
+experiment_root_path: "./Experiments/Experiment1"
+data_root_path: "./code/data/BigEarthNet"
+data:
+  splits:
+    train_split: "./code/data/splits/train.csv"
+    val_split: "./code/data/splits/val.csv"
+    test_split: "./code/data/splits/test.csv"
+    cloudy_split: "./code/data/splits/cloud_and_shadow.csv"
+    cloudy_handpicked_split: "./code/data/splits/cloudy_handpicked_samples.csv"
+    ice_and_snow_split: "./code/data/splits/patches_with_seasonal_snow.csv"
+  label_path: "./code/data/splits/label_indices.json"
+  class_splits: 
+    classes_in_distribution: [2,3,4,5,6,7,8,9,10,11,12,13]
+    classes_ood_training: [0,1]
+    classes_ood_testing: [14,15,16,17,18]
+  input_dim: [14,120,120]
+model:
+  branch_split: [2,12]
+  type: "resnet18"
+  fusion_stage: 5
+save_paths:
+  save_path_models: "saved_models/"
+setup: 
+  seed: 42
+main_training: 
+  batch_size: 128
+  num_epochs: 50
+  learning_rate: 0.001
+ood_training: 
+  batch_size: 16
+  num_epochs: 3
