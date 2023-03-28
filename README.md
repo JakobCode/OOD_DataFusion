@@ -84,7 +84,7 @@ python ./code/test_network.py -cfg path_to_config -s seed_value -ts test_scenari
 If you find our code or results useful for your research, please consider citing: 
 ```
 @article{gawlikowski2023handling,
-  title={Handling Unexpected Inputs - <br>Incorporating Source-Wise Out-of-Distribution Detection into SAR-Optical Data Fusion for Scene Classification},
+  title={Handling Unexpected Inputs - Incorporating Source-Wise Out-of-Distribution Detection into SAR-Optical Data Fusion for Scene Classification},
   author={Gawlikowski, Jakob and Saha, Sudipan and Niebling, Julia and Zhu, Xiao Xiang},
   journal={TBA},
   year={TBA}
